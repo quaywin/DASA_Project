@@ -42,9 +42,9 @@
                 <tbody>
                   <tr ng-repeat="item in Data">
                     <td class="pull-left">{{item.title}}</td>
-                    <td><a href="{{item.webContentLink}}" target="_blank">Download</a></td>
+                    <td><button ng-click="downloadFile(item.webContentLink)">Download</button></td>
                     <td>
-                      <button ng-click="deleteFile(item.id,$index)"></button>
+                      <button ng-click="deleteFile(item.id,$index)">Delete</button>
                       </td>
                   </tr>
                 </tbody>

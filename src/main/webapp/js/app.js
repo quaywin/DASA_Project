@@ -94,6 +94,10 @@ app.controller('GoogleController',
     });
     
   }
+  $scope.downloadFile = function(url){
+    window.open(url, '_blank');
+    window.focus();
+  }
   $scope.deleteFile = function(id,index){
     $http.post('/rest/serviceGG/deleteFile/'+id,{}).success(function(data){
         $scope.Data.splice(index, 1);
